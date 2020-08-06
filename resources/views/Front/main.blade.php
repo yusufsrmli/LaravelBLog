@@ -40,7 +40,7 @@
                     @foreach($menus as $item)
                         <li>
                             <a>{{$item->title}}</a>
-                            @if(count((array)$item->subMenu))
+                            @if(count($item->subMenu))
 
                             <ul>
                                 @foreach($item->subMenu as $subitem)

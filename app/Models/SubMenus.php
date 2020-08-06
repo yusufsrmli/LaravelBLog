@@ -17,8 +17,8 @@ class SubMenus extends Model
         'order',
     ];
 
-    public function subMenu()
+    public function Menus()
     {
-        return $this->hasMany('App\Model\SubMenus','menu_id','id');
+        return $this ->belongsTo('subMenus','menu_id');
     }
 }

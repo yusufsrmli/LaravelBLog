@@ -16,4 +16,9 @@ class Menus extends Model
         'content',
         'order',
     ];
+
+    public function subMenu()
+    {
+        return $this->hasMany('App\Models\SubMenus','menu_id','id');
+    }
 }
