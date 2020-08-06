@@ -42,13 +42,13 @@
                             <a>{{$item->title}}</a>
                             @if(count($item->subMenu))
 
-                            <ul>
-                                @foreach($item->subMenu as $subitem)
-                                    <li>
-                                        <a>{{$subitem->title}}</a>
-                                    </li>
-                                @endforeach
-                            </ul>
+                                <ul>
+                                    @foreach($item->subMenu as $subitem)
+                                        <li>
+                                            <a>{{$subitem->title}}</a>
+                                        </li>
+                                    @endforeach
+                                </ul>
                             @endif
                         </li>
                     @endforeach
