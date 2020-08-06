@@ -25,8 +25,11 @@ class newsController extends Controller
     public function create_post(Request $request)
     {
         $news = new News();
-        $news->title = $request->input('title');
+       /* $news->title = $request->input('title');
         $news->content = $request->input('content');
+       $news->title = $request->title;*/
+        $news->fill($request->all());
+
 
         if ($request->hasFile('image')) {
             $file = $request->file('image');
